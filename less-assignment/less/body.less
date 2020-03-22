@@ -1,15 +1,192 @@
-* {
+/************ COMMON ************/
+html {
   font-size: 62.5%;
 }
+body {
+  padding: 0;
+  margin: 0;
+}
 main {
-  margin: 0 auto;
-  max-width: 100rem;
-
+  background-color: #eeeeee;
 }
-.video-container {
-  max-width: 100rem;
+.main-container {
+  padding: 5rem 0;
+  margin: @centerContent;
+  max-width: @contentContainer;
+  max-height: 100%;
 }
-video {
-  width: 100%;
+.headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: @mainFont;
+    margin: 4rem 0;
+  }
+  .horizontal-line {
+    margin-top: 2rem;
+    border: 2px solid @colorBlack;
+    width: 100%;
+  }
+}
+.hero-image {
+  width: 98%;
   height: 100%;
+  border: 10px solid white;
 }
+
+/************ INDEX.HTML LESS ************/
+
+.image-container {
+  max-width: @contentContainer;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.catalog-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+
+  .catalog-item {
+    border: 10px solid @colorWhite;
+    background-color: @colorWhite;
+    flex: 1 0 24rem;
+    transition: all .2s ease-in-out;
+
+    img {
+      height: 300px;
+      width: 100%;
+    }
+    .catalog-text {
+      font-family: @mainFont;
+      padding: 20px;
+      text-align: center;
+      .small-caps {
+        font-variant: small-caps;
+        font-size: 1.5rem;
+      }
+      .deal-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .deal-text {
+          font-size: 18px;
+          font-weight: 200;
+          margin: 0;
+          color: red;
+        }
+        .price-text {
+          text-decoration: line-through;
+        }
+      }
+      .small-text {
+        font-variant: small-caps;
+        font-size: 1.5rem;
+      }
+      .price-text {
+        font-size: 18px;
+        font-weight: 200;
+        margin: 0;
+        color: #8e8e8e;
+      }
+
+      button {
+        margin-top: .5rem;
+        border-radius: 5px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: .4s ease;
+        background-color: @colorWhite;
+        border: 3px solid @colorBlack;
+      }
+      button:hover {
+        cursor: pointer;
+        color: white;
+        transition: .4s ease;
+        background-color: @colorBlack;
+      }
+    }
+  }
+  .catalog-item:hover {
+    transform: scale(1.015);
+    z-index: 0;
+    cursor: pointer;
+  }
+}
+.subscribe-row {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: @colorBlack;
+  border: 10px solid @colorWhite;
+  height: 250px;
+  padding: 15px;
+  font-family: @mainFont;
+
+  .subscribe-item {
+    color: @colorWhite;
+    text-align: center;
+    .long-horizontal-line {
+      margin: 0 auto;
+      border: 2px solid @colorWhite;
+      width: 32%;
+    }
+    .short-horizontal-line {
+      margin: 0 auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid @colorWhite;
+      width: 25%;
+    }
+    h1 {
+      font-family: @googleFont;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    .small-text {
+      font-variant: small-caps;
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    .select-q {
+      font-size: 1.9rem;
+    }
+    .search-container {
+      input[type=email] {
+        margin-top: 2rem;
+        font-size: 17px;
+        border: none;
+        border-bottom: 3px solid @colorWhite;
+        background-color: transparent;
+        color: @colorWhite;
+        width: 300px;
+      }
+      button {
+        margin: .5rem 0 0 1rem;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: .4s ease;
+        background-color: @colorWhite;
+        border: 3px solid @colorWhite;
+      }
+      button:hover {
+        cursor: pointer;
+        color: white;
+        transition: .4s ease;
+        background-color: @colorBlack;
+      }
+      .nav-links-row {
+        font-size: 3rem;
+        padding-top: 2rem;
+      }
+    }
+
+  }
+}
+
+

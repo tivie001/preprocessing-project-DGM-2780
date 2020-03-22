@@ -1,59 +1,173 @@
-header{
-  height: 175px;
+.header {
+  background-color: @colorBlack;
+  text-align: center;
+  padding: 10px 10px 0 10px;
+
+  h1 {
+    color: white;
+    font-family: @googleFont;
+    font-size: 5rem;
+    margin: 0;
+  }
+  .logo {
+    padding-left: 1rem;
+    padding-top: .5rem;
+    font-size: 4rem;
+  }
 }
 
-#header {
+#navbar {
+  overflow: hidden;
   display: flex;
   justify-content: center;
+  font-family: @mainFont;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: @contentContainer;
+    border-bottom: 3px solid @colorBlack;
+
+    #nav-logo {
+      h1{
+        font-family: @googleFont;
+        font-size: 2rem;
+        margin: 0;
+        i {
+          margin-left: .5rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  a {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+/************ Conditional classes ************/
+
+/********** Base Styles **************/
+
+.nav-styles {
+  background-color: @colorWhite;
+  .active {
+    border-bottom: 5px solid @colorBlack;
+  }
+  a {
+    color: @colorBlack;
+    padding: 14px;
+    font-size: 2rem;
+  }
+  a:hover {
+    border-bottom: 5px solid @colorBlack;
+  }
+  input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: none;
+    border-bottom: 3px solid @colorBlack;
+    background-color: transparent;
+    color: @colorBlack;
+    width: 100px;
+  }
+  .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+.scroll-nav-styles {
+  background-color: @colorBlack;
+  z-index: 9;
+  #nav-logo {
+    color: @colorWhite;
+  }
+  .nav-links {
+    .active {
+      border-bottom: 5px solid @colorWhite;
+    }
+    a {
+      color: @colorWhite;
+      padding: 16px;
+      font-size: 1.5rem;
+    }
+    a:hover {
+      border-bottom: 5px solid @colorWhite;
+    }
+  }
+  input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: none;
+    border-bottom: 3px solid @colorWhite;
+    background-color: transparent;
+    color: @colorWhite;
+    width: 100px;
+  }
+  .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: @colorWhite;
+  }
+}
+/*************************/
+
+
+.sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  color: white;
-  background-color: #333;
-  height: 70px;
-  font-family: 'Fugaz One', serif;
-  padding-top: 1rem;
-  font-size: 5rem;
+  opacity: 0;
+
+  .nav-container {
+    border-bottom: none !important;
+  }
 }
-.logo {
-  padding-left: 1rem;
-  padding-top: .5rem;
-  font-size: 4rem;
+.hide-nav-logo {
+  display: none;
 }
-.nav-bar {
-  height: 70px;
-  position: fixed;
-  top: 12%;
-  width: 100%;
+.show-nav-logo {
+  display: block;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 14px;
+}
+.animated{
+  animation: appear .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FFFFFF;
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-      li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: 18px;
-      }
-      li a:hover:not(.active) {
-        //background-color: #111;
-        border-bottom: 3px solid black;
-        color: #4c4c4c;
-        text-decoration: none;
-      }
-    }
-
+#navbar .search-container {
+  float: right;
+  margin-left: 2rem;
 }
 

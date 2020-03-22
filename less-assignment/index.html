@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body onload="myFunction()">
 	<header>
 		<div class="header">
 			<h1>Road Warriors<i class="fas fa-biking logo"></i></h1>
@@ -20,14 +20,14 @@
 			<div class="nav-container">
 				<div id="nav-logo" class="hide-nav-logo"><a><h1>Road Warriors<i class="fas fa-biking logo"></i></h1></a></div>
 				<div class="nav-links">
+					<a href="index.html" class="active">HOME</a>
 					<a href="javascript:void(0)">GEAR</a>
-					<a href="javascript:void(0)">TECH</a>
 					<a href="javascript:void(0)">LIVING</a>
-					<a href="javascript:void(0)">VEHICLES</a>
+					<a href="shopBikes.html">BIKES</a>
 					<a href="javascript:void(0)">BUYING GUIDES</a>
 					<a href="javascript:void(0)">MORE</a>
 					<div class="search-container">
-						<form action="/action_page.php">
+						<form action="">
 							<input type="text" placeholder="Search..." name="search">
 							<button type="submit"><i class="fa fa-search"></i></button>
 						</form>
@@ -38,182 +38,98 @@
 	</header>
 	<main>
 		<div class="main-container">
-			<!--		<div class="video-container">-->
-			<!--			<video controls autoplay>-->
-			<!--				<source src="assets/mountain-bike-video.mp4" type="video/mp4">-->
-			<!--			</video>-->
-			<!--		</div>-->
 			<div class="image-container">
 				<img class="hero-image" src="assets/cafe-racer-hero-image-overlay.jpg" alt="BMW cafe racer bike in front of mountain">
 			</div>
 			<div class="catalog-container">
 				<div class="headings text-xl-center">
 					<div class="horizontal-line"></div>
-					<h1>STANDARD</h1>
+					<h1>FEATURED PRODUCTS</h1>
 				</div>
 				<div class="catalog-row">
 					<div class="catalog-item">
-						<img src="assets/standard1.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<img src="assets/sportbike5.jpg" alt=""/>
 						<div class="catalog-text">
-							<h1>Yamaha Teal Sport Bike</h1>
-							<p class="price-text">$300 - $1000 /job</p>
+							<h1>The New 2020 KTM</h1>
+							<p class="price-text small-caps">see more</p>
 						</div>
 					</div>
 					<div class="catalog-item">
-						<img src="assets/standard3.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<img src="assets/simpson-bike-helmet.jpg" alt="Simpson Outlaw Bandit Motorcycle Helmet"/>
 						<div class="catalog-text">
-							<h1>Custom-Made Moped</h1>
-							<p class="price-text">$399.99</p>
+							<h1>Simpson Outlaw Bandit Motorcycle Helmet</h1>
+							<p class="price-text">$449.95</p>
 						</div>
 					</div>
+					<div class="catalog-item">
+						<img src="assets/bike-jacket.jpg" alt="Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200"/>
+						<div class="catalog-text">
+							<h1>Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200</h1>
+							<p class="price-text">$299.99</p>
+						</div>
+					</div>
+
 				</div>
 				<div class="headings text-xl-center">
 					<div class="horizontal-line"></div>
-					<h1>CRUISERS</h1>
-				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/cruiser2.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Custom-Made Sport Bullet</h1>
-							<span class="small-text">highest bidder</span>
-							<br>
-							<button>Bid Now</button>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/cruiser3.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>BMW Road Cruiser</h1>
-							<p class="price-text">$8,000</p>
-						</div>
-					</div>
-				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/cruiser4.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Custom-Made Triumph</h1>
-							<span class="small-text">highest bidder</span>
-							<br>
-							<button>Bid Now</button>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/cruiser5.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Custom-Made Racer</h1>
-							<p class="price-text">$5,999.99</p>
-						</div>
-					</div>
+					<h1>BEST DEALS</h1>
 				</div>
 				<div class="catalog-row">
 					<div class="catalog-item">
 						<img src="assets/cruiser6.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
 						<div class="catalog-text">
 							<h1>Cafe Cruiser 1150</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$2,249.99</p>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$4,249.99</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$2,249.99</p>
+							</div>
 						</div>
 					</div>
 					<div class="catalog-item">
-						<img src="assets/cruiser7.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<img src="assets/california-helmet.jpeg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
 						<div class="catalog-text">
-							<h1>Cafe Racer</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$3,999.99</p>
+							<h1>Custom-Made California Gold Helmet</h1>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$150.00</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$79.99</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/cruiser8.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Indian Cafe Cruiser</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$12,000</p>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/cruiser9.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Royal Enfield</h1>
-							<span class="small-text">highest bidder</span>
-							<br>
-							<button>Bid Now</button>
-						</div>
-					</div>
-				</div>
-				<div class="headings text-xl-center">
-					<div class="horizontal-line"></div>
-					<h1>SPORT BIKES</h1>
-				</div>
-				<div class="catalog-row">
 					<div class="catalog-item">
 						<img src="assets/sportbike1.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
 						<div class="catalog-text">
 							<h1>Honda CBR600RR</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$6,999.99</p>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/sportbike2.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Suzuki GSX-R</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$10,999.99</p>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$10,149.99</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$6,999.99</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/sportbike3.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Bullet Sport Bike</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$5,299.99</p>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/sportbike4.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Ducati <span class="small-caps">(red)</span></h1>
-							<p class="price-text">$65,000</p>
+				<div class="subscribe-row">
+					<div class="subscribe-item">
+						<h1>SUBSCRIBE TO EMAIL</h1>
+						<div class="long-horizontal-line"></div>
+						<div class="short-horizontal-line"></div>
+						<span class="small-text">got mail<span class="select-q">?</span> sign up for road warriors newsletter.</span>
+						<div class="search-container">
+							<form action="">
+								<input type="email" placeholder="ENTER YOUR EMAIL" name="email">
+								<button>SUBSCRIBE</button>
+							</form>
+							<div class="nav-links-row">
+								<i class="fab fa-facebook-square"></i>
+								<i class="fab fa-instagram"></i>
+								<i class="fab fa-pinterest-square"></i>
+								<i class="fab fa-twitter-square"></i>
+								<i class="fab fa-youtube-square"></i>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="headings text-xl-center">
 					<div class="horizontal-line"></div>
-					<h1>TOURING</h1>
-				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/touring1.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
-						<div class="catalog-text">
-							<h1>Harley Davidson <span class="small-caps">(red cruiser)</span></h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$10,000</p>
-						</div>
-					</div>
-					<div class="catalog-item">
-						<img src="assets/touring2.jpg" alt="man on black cruiser motorcycle in highway"/>
-						<div class="catalog-text">
-							<h1>Harley Davidson <span class="small-caps">(black cruiser)</span></h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$7,499.99</p>
-						</div>
-					</div>
-				</div>
-				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/touring3.jpg" alt="black and gray touring motorcycle on wooden dock near brown field under gray and orange skies"/>
-						<div class="catalog-text">
-							<h1>Harley Davidson</h1>
-							<span class="small-text">from</span>
-							<p class="price-text">$4,000</p>
-						</div>
-					</div>
+					<h1>REVIEWS</h1>
 				</div>
 			</div>
 		</div>
@@ -222,17 +138,27 @@
 		<div class="footer-container">
 			<h1 class="footer-logo">Road Warriors<i class="fas fa-biking logo"></i></h1>
 			<div class="nav-links-row">
-				<h3>GEAR</h3>
+				<a href="index.html"><h3>home</h3></a>
 				<h3 class="slash-divider">/</h3>
-				<h3>TECH</h3>
+				<a href="javascript:void(0)"><h3>gear</h3></a>
 				<h3 class="slash-divider">/</h3>
-				<h3>LIVING</h3>
+				<a href="javascript:void(0)"><h3>living</h3></a>
 				<h3 class="slash-divider">/</h3>
-				<h3>VEHICLES</h3>
+				<a href="shopBikes.html"><h3>bikes</h3></a>
 				<h3 class="slash-divider">/</h3>
-				<h3>BUYING GUIDES</h3>
+				<a href="javascript:void(0)"><h3>buying guides</h3></a>
 				<h3 class="slash-divider">/</h3>
-				<h3>MORE</h3>
+				<a href="javascript:void(0)"><h3>more</h3></a>
+			</div>
+			<div class="nav-links-row">
+				<p class="copyright">&copy; 2020 tyler ivie &bull; all rights reserved &bull; dgm 2780</p>
+			</div>
+			<div class="nav-links-row">
+				<i class="fab fa-facebook-square"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-pinterest-square"></i>
+				<i class="fab fa-twitter-square"></i>
+				<i class="fab fa-youtube-square"></i>
 			</div>
 		</div>
 	</footer>
@@ -246,6 +172,9 @@
 	let sticky = navbar.offsetTop;
 
 	function myFunction() {
+		if(window.pageYOffset <= 0) {
+			navbar.classList.add("nav-styles");
+		}
 		if (window.pageYOffset >= sticky) {
 			navbar.classList.add("sticky");
 			navbar.classList.add("animated");

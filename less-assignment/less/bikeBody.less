@@ -37,20 +37,18 @@ main {
   border: 10px solid white;
 }
 
-/************ INDEX.HTML LESS ************/
-
 .image-container {
   max-width: @contentContainer;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-.catalog-row {
+.bike-catalog-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
   margin-bottom: 2rem;
 }
-.catalog-item {
+.bike-catalog-item {
   border: 10px solid white;
   background-color: @colorWhite;
   flex: 1 0 24rem;
@@ -98,10 +96,9 @@ main {
     }
   }
 }
-.catalog-item:hover {
+.bike-catalog-item:hover {
   transform: scale(1.015);
   z-index: 0;
   cursor: pointer;
 }
 
-/************ BIKES.HTML LESS ************/
