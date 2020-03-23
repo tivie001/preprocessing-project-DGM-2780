@@ -6,35 +6,59 @@ body {
   padding: 0;
   margin: 0;
 }
+
+/************ MAIN CONTAINER ************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .main-container {
+    padding: 2rem 0;
+  }
+  .image-container {
+    margin: 2rem;
+  }
+  .headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: @mainFont;
+      margin: 4rem 0;
+    }
+    .horizontal-line {
+      margin-top: 2rem;
+      border: 2px solid @colorBlack;
+      width: 100%;
+    }
+  }
+  .bike-catalog-row {
+    margin: 1rem;
+  }
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 1224px) {
+  .headings {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+  .bike-catalog-row {
+    margin: 1rem;
+  }
+}
+
 main {
   background-color: #eeeeee;
 }
 .main-container {
-  padding: 5rem 0;
+  padding: 2rem 0;
   margin: @centerContent;
   max-width: @contentContainer;
   max-height: 100%;
-}
-.headings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: @mainFont;
-    margin: 4rem 0;
-  }
 }
 .horizontal-line {
   margin-top: 2rem;
   border: 2px solid black;
   width: 100%;
-}
-.hero-image {
-  width: 98%;
-  height: 100%;
-  border: 10px solid white;
 }
 
 .image-container {
@@ -49,7 +73,7 @@ main {
   margin-bottom: 2rem;
 }
 .bike-catalog-item {
-  border: 10px solid white;
+  .image-border();
   background-color: @colorWhite;
   flex: 1 0 24rem;
   transition: all .2s ease-in-out;
@@ -79,20 +103,10 @@ main {
       margin: 0;
     }
     button {
-      margin-top: .5rem;
-      border-radius: 5px;
-      padding: 10px;
-      font-weight: bold;
-      font-size: 1.5rem;
-      transition: .4s ease;
-      background-color: @colorWhite;
-      border: 3px solid @colorBlack;
+      .btn-style();
     }
-    button:hover {
-      cursor: pointer;
-      color: white;
-      transition: .4s ease;
-      background-color: @colorBlack;
+    button:hover{
+      .btn-style-hover();
     }
   }
 }

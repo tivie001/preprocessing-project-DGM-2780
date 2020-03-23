@@ -5,16 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/index.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
 	<script src="https://kit.fontawesome.com/8b54dd32ad.js" crossorigin="anonymous"></script>
-
 	<link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
-
 </head>
 <body onload="myFunction()">
+	<div id="mySidebar" class="sidebar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html" class="active">home</a>
+		<a href="javascript:void(0)">gear</a>
+		<a href="javascript:void(0)">living</a>
+		<a href="shopBikes.html">bikes</a>
+		<a href="javascript:void(0)">buying guides</a>
+		<a href="javascript:void(0)">more</a>
+	</div>
 	<header>
 		<div class="header">
+			<button id="hamBtn" class="openbtn" onclick="openMobileNav()">&#9776;</button>
 			<h1>Road Warriors<i class="fas fa-biking logo"></i></h1>
+			<i class="fas fa-search"></i>
 		</div>
 		<div id="navbar">
 			<div class="nav-container">
@@ -47,8 +55,8 @@
 					<h1>FEATURED PRODUCTS</h1>
 				</div>
 				<div class="catalog-row">
-					<div class="catalog-item">
-						<img src="assets/sportbike5.jpg" alt=""/>
+					<div class="catalog-item" onclick="sendToBikePage()">
+						<img id="customBikePic" src="assets/sportbike5.jpg" alt="The New 2020 KTM"/>
 						<div class="catalog-text">
 							<h1>The New 2020 KTM</h1>
 							<p class="price-text small-caps">see more</p>
@@ -68,7 +76,9 @@
 							<p class="price-text">$299.99</p>
 						</div>
 					</div>
-
+				</div>
+				<div class="see-more-btn">
+					<button>more products</button>
 				</div>
 				<div class="headings text-xl-center">
 					<div class="horizontal-line"></div>
@@ -106,6 +116,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="see-more-btn">
+					<button>more deals</button>
+				</div>
 				<div class="subscribe-row">
 					<div class="subscribe-item">
 						<h1>SUBSCRIBE TO EMAIL</h1>
@@ -115,7 +128,7 @@
 						<div class="search-container">
 							<form action="">
 								<input type="email" placeholder="ENTER YOUR EMAIL" name="email">
-								<button>SUBSCRIBE</button>
+								<button>subscribe</button>
 							</form>
 							<div class="nav-links-row">
 								<i class="fab fa-facebook-square"></i>
@@ -130,6 +143,68 @@
 				<div class="headings text-xl-center">
 					<div class="horizontal-line"></div>
 					<h1>REVIEWS</h1>
+				</div>
+				<div class="reviews-row">
+					<div class="review-item">
+						<img src="assets/reviewer1.jpg">
+						<div class="review-text">
+							<h1>Road Warriors has the best stuff!</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Catherine McPhee</h2>
+							<div class="review">
+								I got a new BMW 3100 and matching gear from them at a great deal and look forward to good
+								weather so I go out and take advantage of these quality products!
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<img src="assets/reviewer2.jpg">
+						<div class="review-text">
+							<h1>Love my Redline Men's Orange Stripe jacket!</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Jimbo Webber</h2>
+							<div class="review">
+								Bought the featured jacket, Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200
+								and I absolutely love it. It is light enough to be worn in the summer and warm enough for winter
+								as well!
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<img src="assets/reviewer3.jpg">
+						<div class="review-text">
+							<h1>I love this place! Shipping takes longer than expected but super high quality products.</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star grey-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Francis Jacobson</h2>
+							<div class="review">
+								Road Warriors has the best products at the best price! I hit up the recent sale they were having
+								on accessories and I was very impressed with what I got for the price. Shipping took a whole month
+								when it was only suppose to take 2 weeks that why I gave them a 4 out of 5 star rating but
+								in the end I love this place and would buy again.
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -153,7 +228,7 @@
 			<div class="nav-links-row">
 				<p class="copyright">&copy; 2020 tyler ivie &bull; all rights reserved &bull; dgm 2780</p>
 			</div>
-			<div class="nav-links-row">
+			<div class="social-links-row">
 				<i class="fab fa-facebook-square"></i>
 				<i class="fab fa-instagram"></i>
 				<i class="fab fa-pinterest-square"></i>
@@ -164,6 +239,8 @@
 	</footer>
 </body>
 </html>
+<script type="text/javascript" src="js/index.js"></script>
+
 <script>
 	window.onscroll = function() {myFunction()};
 

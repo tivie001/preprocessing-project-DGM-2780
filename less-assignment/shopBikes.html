@@ -12,9 +12,20 @@
 
 </head>
 <body onload="myFunction()">
+	<div id="mySidebar" class="sidebar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html" class="active">home</a>
+		<a href="javascript:void(0)">gear</a>
+		<a href="javascript:void(0)">living</a>
+		<a href="shopBikes.html">bikes</a>
+		<a href="javascript:void(0)">buying guides</a>
+		<a href="javascript:void(0)">more</a>
+	</div>
 	<header>
 		<div class="header">
+			<button id="hamBtn" class="openbtn" onclick="openMobileNav()">&#9776;</button>
 			<h1>Road Warriors<i class="fas fa-biking logo"></i></h1>
+			<i class="fas fa-search"></i>
 		</div>
 		<div id="navbar">
 			<div class="nav-container">
@@ -69,7 +80,7 @@
 							<h1>Custom-Made Sport Bullet</h1>
 							<span class="small-text">highest bidder</span>
 							<br>
-							<button>Bid Now</button>
+							<button class="btn-style">bid now</button>
 						</div>
 					</div>
 					<div class="bike-catalog-item">
@@ -87,7 +98,7 @@
 							<h1>Custom-Made Triumph</h1>
 							<span class="small-text">highest bidder</span>
 							<br>
-							<button>Bid Now</button>
+							<button>bid now</button>
 						</div>
 					</div>
 					<div class="bike-catalog-item">
@@ -131,7 +142,7 @@
 							<h1>Royal Enfield</h1>
 							<span class="small-text">highest bidder</span>
 							<br>
-							<button>Bid Now</button>
+							<button>bid now</button>
 						</div>
 					</div>
 				</div>
@@ -228,7 +239,7 @@
 			<div class="nav-links-row">
 				<p class="copyright">&copy; 2020 tyler ivie &bull; all rights reserved &bull; dgm 2780</p>
 			</div>
-			<div class="nav-links-row">
+			<div class="social-links-row">
 				<i class="fab fa-facebook-square"></i>
 				<i class="fab fa-instagram"></i>
 				<i class="fab fa-pinterest-square"></i>
